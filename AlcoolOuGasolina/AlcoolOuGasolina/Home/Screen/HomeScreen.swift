@@ -20,14 +20,25 @@ class HomeScreen: UIView {
         return image
     }()
 
-    /* Para inicializar é só digitar o init e selecionar o que tem frame no campo de seleção */
+    lazy var logoAppImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "LOGO")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
     
+    
+    /* Para inicializar é só digitar o init e selecionar o que tem frame no campo de seleção */
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         /* aqui você está adicionando uma subview na viewController, avisando que agora ela existe e faz parte do projeto */
         addSubview(backgroundImageView)
+        addSubview(logoAppImageView)
         configConstraints()
+        
+        
     }
     /* aqui o Xcode já reporta o erro com um Fix, selecione-o e já irá aparecer tudo digitado */
     required init?(coder: NSCoder) {
@@ -43,7 +54,11 @@ class HomeScreen: UIView {
         backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
         backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
         backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-        backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        
+        logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+        logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+        logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         
         
         ])
