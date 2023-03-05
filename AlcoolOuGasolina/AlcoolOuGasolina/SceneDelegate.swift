@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let vc: ViewController = ViewController()
+        let vc: HomeVC = HomeVC()
         let nav = UINavigationController(rootViewController: vc) /* aqui ele está indicando que em caso de navegaçao a tela inicial do aplicativo(root) será a ViewController() */
         window.rootViewController = nav
         window.makeKeyAndVisible()
