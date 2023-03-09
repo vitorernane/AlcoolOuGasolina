@@ -73,6 +73,10 @@ class HomeScreen: UIView {
         logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
         logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         
+        startButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -125),
+        startButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+        startButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+        startButton.heightAnchor.constraint(equalToConstant: 60),
         
         ])
     }
