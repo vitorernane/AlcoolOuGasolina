@@ -32,7 +32,7 @@ class HomeScreen: UIView {
     let button = UIButton ()
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("Começar", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20e)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
