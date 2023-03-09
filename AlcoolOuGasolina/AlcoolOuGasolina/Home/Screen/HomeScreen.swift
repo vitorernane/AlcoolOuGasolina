@@ -28,6 +28,18 @@ class HomeScreen: UIView {
         return image
     }()
     
+    lazy var startButton: UIButton = {
+    let button = UIButton ()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle("Começar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
+    return button
+    } ()
+    
     
     /* Para inicializar é só digitar o init e selecionar o que tem frame no campo de seleção */
     override init(frame: CGRect) {
@@ -36,6 +48,7 @@ class HomeScreen: UIView {
         /* aqui você está adicionando uma subview na viewController, avisando que agora ela existe e faz parte do projeto */
         addSubview(backgroundImageView)
         addSubview(logoAppImageView)
+        addSubview(startButton)
         configConstraints()
         
         
