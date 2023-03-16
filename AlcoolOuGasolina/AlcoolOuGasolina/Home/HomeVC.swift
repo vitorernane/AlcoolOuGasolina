@@ -18,9 +18,17 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.delegate(delegate: self)
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
+    
+extension HomeVC: HomeScreenDelegate {
+    func tappedStartButton() {
+        print(#function)
+    }
+    
+}
+    
 
